@@ -2017,3 +2017,659 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.1ms | Allocations: 6005)
 
 
+Started GET "/" for ::1 at 2024-09-01 12:38:22 +0300
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 44)
+Completed 200 OK in 88ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 1821)
+
+
+Started GET "/users" for ::1 at 2024-09-01 12:38:45 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 4921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 142.2ms | Allocations: 12159)
+Completed 200 OK in 185ms (Views: 144.5ms | ActiveRecord: 0.8ms | Allocations: 13801)
+
+
+Started GET "/users/1" for ::1 at 2024-09-01 12:39:38 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+Completed 404 Not Found in 81ms (ActiveRecord: 0.9ms | Allocations: 4156)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/users/2" for ::1 at 2024-09-01 12:39:46 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 4419)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.2ms | Allocations: 5545)
+
+
+Started GET "/users/3" for ::1 at 2024-09-01 12:39:54 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 4215)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.2ms | Allocations: 5177)
+
+
+Started GET "/users/1" for ::1 at 2024-09-01 12:39:58 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1115)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/users/" for ::1 at 2024-09-01 12:40:10 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 5608)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.1ms | Allocations: 6039)
+
+
+Started GET "/" for ::1 at 2024-09-01 13:07:50 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/users/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 8399)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.7ms | Allocations: 9272)
+
+
+Started GET "/" for ::1 at 2024-09-01 13:07:52 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 5591)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.3ms | Allocations: 6002)
+
+
+Started GET "/users/2/edit" for ::1 at 2024-09-01 13:14:41 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 145.1ms | Allocations: 6446)
+  Rendered users/edit.html.erb within layouts/application (Duration: 147.2ms | Allocations: 6878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.3ms | Allocations: 10868)
+Completed 200 OK in 184ms (Views: 177.2ms | ActiveRecord: 0.6ms | Allocations: 12719)
+
+
+Started GET "/users" for ::1 at 2024-09-01 13:14:46 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 5618)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.2ms | Allocations: 6032)
+
+
+Started GET "/users/2/edit" for ::1 at 2024-09-01 13:14:56 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 934)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 5188)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.2ms | Allocations: 6151)
+
+
+Started GET "/users/2/edit" for ::1 at 2024-09-01 13:14:59 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 934)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 5185)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.2ms | Allocations: 6146)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMicroposts (20240901105053)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240901105053"]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2024-09-01 13:53:20 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3815)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 146.0ms | Allocations: 19302)
+Completed 200 OK in 154ms (Views: 149.6ms | ActiveRecord: 0.3ms | Allocations: 20761)
+
+
+Started GET "/users" for ::1 at 2024-09-01 13:53:20 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 5742)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.1ms | Allocations: 6154)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 13:53:28 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1025)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 5274)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.2ms | Allocations: 6415)
+
+
+Started GET "/microposts/new" for ::1 at 2024-09-01 13:55:28 +0300
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 63.3ms | Allocations: 5063)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 65.5ms | Allocations: 5436)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.6ms | Allocations: 9577)
+Completed 200 OK in 113ms (Views: 103.9ms | ActiveRecord: 1.0ms | Allocations: 12465)
+
+
+Started POST "/microposts" for ::1 at 2024-09-01 13:56:03 +0300
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"Все работает, это очень приятно", "user_id"=>"2"}, "commit"=>"Create Micropost"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (3.9ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Все работает, это очень приятно"], ["user_id", 2], ["created_at", "2024-09-01 10:56:03.777312"], ["updated_at", "2024-09-01 10:56:03.777312"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 17ms (ActiveRecord: 7.3ms | Allocations: 2741)
+
+
+Started GET "/microposts/1" for ::1 at 2024-09-01 13:56:03 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 297)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 4545)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.2ms | Allocations: 5773)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 13:56:09 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 5133)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.1ms | Allocations: 5546)
+
+
+Started GET "/microposts/1" for ::1 at 2024-09-01 13:56:12 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 4368)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms | Allocations: 5331)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 13:56:14 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 5138)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.1ms | Allocations: 5551)
+
+
+Started GET "/microposts/new" for ::1 at 2024-09-01 13:56:58 +0300
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 1.6ms | Allocations: 853)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 5226)
+Completed 200 OK in 37ms (Views: 36.8ms | ActiveRecord: 0.0ms | Allocations: 5637)
+
+
+Started POST "/microposts" for ::1 at 2024-09-01 13:57:07 +0300
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"Вторая проверка", "user_id"=>"3"}, "commit"=>"Create Micropost"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (1.7ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Вторая проверка"], ["user_id", 3], ["created_at", "2024-09-01 10:57:07.885990"], ["updated_at", "2024-09-01 10:57:07.885990"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 10ms (ActiveRecord: 4.7ms | Allocations: 2520)
+
+
+Started GET "/microposts/2" for ::1 at 2024-09-01 13:57:07 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 4369)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.2ms | Allocations: 5338)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 13:57:10 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 5286)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.2ms | Allocations: 5699)
+
+
+Started GET "/microposts/new" for ::1 at 2024-09-01 13:58:14 +0300
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 0.9ms | Allocations: 851)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 5224)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 5635)
+
+
+Started POST "/microposts" for ::1 at 2024-09-01 13:58:25 +0300
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"проверка css", "user_id"=>"4"}, "commit"=>"Create Micropost"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (4.0ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "проверка css"], ["user_id", 4], ["created_at", "2024-09-01 10:58:25.860297"], ["updated_at", "2024-09-01 10:58:25.860297"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/3
+Completed 302 Found in 12ms (ActiveRecord: 7.0ms | Allocations: 2518)
+
+
+Started GET "/microposts/3" for ::1 at 2024-09-01 13:58:25 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 4377)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.1ms | Allocations: 5347)
+
+
+Started GET "/microposts/3" for ::1 at 2024-09-01 13:58:42 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 4367)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.1ms | Allocations: 5327)
+
+
+Started GET "/microposts/3/edit" for ::1 at 2024-09-01 13:58:46 +0300
+Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/edit.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 1.2ms | Allocations: 944)
+  Rendered microposts/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 5478)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.1ms | Allocations: 6568)
+
+
+Started PATCH "/microposts/3" for ::1 at 2024-09-01 13:59:22 +0300
+Processing by MicropostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"проверка css, после обновления страницы описание пропадает ", "user_id"=>"4"}, "commit"=>"Update Micropost", "id"=>"3"}
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:44:in `block in update'
+  [1m[36mMicropost Update (3.9ms)[0m  [1m[33mUPDATE "microposts" SET "content" = ?, "updated_at" = ? WHERE "microposts"."id" = ?[0m  [["content", "проверка css, после обновления страницы описание пропадает "], ["updated_at", "2024-09-01 10:59:22.899825"], ["id", 3]]
+  ↳ app/controllers/microposts_controller.rb:44:in `block in update'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/microposts/3
+Completed 302 Found in 16ms (ActiveRecord: 7.4ms | Allocations: 3184)
+
+
+Started GET "/microposts/3" for ::1 at 2024-09-01 13:59:22 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 4378)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.1ms | Allocations: 5349)
+
+
+Started GET "/microposts/3/edit" for ::1 at 2024-09-01 13:59:41 +0300
+Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/edit.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 1.1ms | Allocations: 925)
+  Rendered microposts/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 5339)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.2ms | Allocations: 6302)
+
+
+Started PATCH "/microposts/3" for ::1 at 2024-09-01 13:59:54 +0300
+Processing by MicropostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"проверка css, после обновления страницы notice пропадает ", "user_id"=>"4"}, "commit"=>"Update Micropost", "id"=>"3"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:44:in `block in update'
+  [1m[36mMicropost Update (0.5ms)[0m  [1m[33mUPDATE "microposts" SET "content" = ?, "updated_at" = ? WHERE "microposts"."id" = ?[0m  [["content", "проверка css, после обновления страницы notice пропадает "], ["updated_at", "2024-09-01 10:59:54.327795"], ["id", 3]]
+  ↳ app/controllers/microposts_controller.rb:44:in `block in update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/microposts/3
+Completed 302 Found in 11ms (ActiveRecord: 3.7ms | Allocations: 3150)
+
+
+Started GET "/microposts/3" for ::1 at 2024-09-01 13:59:54 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 4377)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms | Allocations: 5347)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 13:59:58 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1195)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 5433)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.2ms | Allocations: 5845)
+
+
+Started GET "/microposts/new" for ::1 at 2024-09-01 14:00:04 +0300
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 1.1ms | Allocations: 852)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 988)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 5225)
+Completed 200 OK in 36ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 5636)
+
+
+Started POST "/microposts" for ::1 at 2024-09-01 14:00:10 +0300
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"", "user_id"=>""}, "commit"=>"Create Micropost"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (1.6ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", ""], ["created_at", "2024-09-01 11:00:10.039758"], ["updated_at", "2024-09-01 11:00:10.039758"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/4
+Completed 302 Found in 10ms (ActiveRecord: 4.7ms | Allocations: 2460)
+
+
+Started GET "/microposts/4" for ::1 at 2024-09-01 14:00:10 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 4373)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.1ms | Allocations: 5343)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 14:00:11 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 5589)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.3ms | Allocations: 6002)
+
+
+Started GET "/microposts/new" for ::1 at 2024-09-01 14:00:41 +0300
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 1.0ms | Allocations: 851)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 5229)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 5640)
+
+
+Started POST "/microposts" for ::1 at 2024-09-01 14:00:50 +0300
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"Ruby (англ. ruby — рубин, произносится ['ru:bɪ] — ру́би) — динамический, рефлективный, интерпретируемый высокоуровневый язык программирования[9][10]. Язык обладает независимой от операционной системы реализацией многопоточности, сильной динамической типизацией, сборщиком мусора и многими другими возможностями[⇨]. По особенностям синтаксиса он близок к языкам Perl и Eiffel, по объектно-ориентированному подходу — к Smalltalk. Также некоторые черты языка взяты из Python, Lisp, Dylan и Клу.\r\n\r\nКроссплатформенная реализация интерпретатора языка является полностью свободной[11].", "user_id"=>""}, "commit"=>"Create Micropost"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (3.8ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "Ruby (англ. ruby — рубин, произносится ['ru:bɪ] — ру́би) — динамический, рефлективный, интерпретируемый высокоуровневый язык программирования[9][10]. Язык обладает независимой от операционной системы реализацией многопоточности, сильной динамической типизацией, сборщиком мусора и многими другими возможностями[⇨]. По особенностям синтаксиса он близок к языкам Perl и Eiffel, по объектно-ориентированному подходу — к Smalltalk. Также некоторые черты языка взяты из Python, Lisp, Dylan и Клу.\r\n\r\nКроссплатформенная реализация интерпретатора языка является полностью свободной[11]."], ["created_at", "2024-09-01 11:00:50.696916"], ["updated_at", "2024-09-01 11:00:50.696916"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/5
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms | Allocations: 2504)
+
+
+Started GET "/microposts/5" for ::1 at 2024-09-01 14:00:50 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 4373)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.2ms | Allocations: 5343)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 14:00:52 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1493)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 5731)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.2ms | Allocations: 6143)
+
+
+Started GET "/microposts/new" for ::1 at 2024-09-01 14:01:00 +0300
+Processing by MicropostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 0.9ms | Allocations: 851)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 987)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 5231)
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 5643)
+
+
+Started POST "/microposts" for ::1 at 2024-09-01 14:01:04 +0300
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "micropost"=>{"content"=>"123", "user_id"=>"123"}, "commit"=>"Create Micropost"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (1.7ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "123"], ["user_id", 123], ["created_at", "2024-09-01 11:01:04.185098"], ["updated_at", "2024-09-01 11:01:04.185098"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/6
+Completed 302 Found in 10ms (ActiveRecord: 4.8ms | Allocations: 2517)
+
+
+Started GET "/microposts/6" for ::1 at 2024-09-01 14:01:04 +0300
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 4376)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.1ms | Allocations: 5346)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 14:01:05 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 5886)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.2ms | Allocations: 6298)
+
+
+Started DELETE "/microposts/6" for ::1 at 2024-09-01 14:01:08 +0300
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:57:in `destroy'
+  [1m[36mMicropost Destroy (1.7ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/microposts_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 12ms (ActiveRecord: 4.9ms | Allocations: 2676)
+
+
+Started GET "/microposts" for ::1 at 2024-09-01 14:01:08 +0300
+Processing by MicropostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 5736)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms | Allocations: 6156)
+
+
